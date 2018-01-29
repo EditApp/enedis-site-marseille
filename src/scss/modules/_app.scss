@@ -5,5 +5,27 @@ body {
     background-size: cover;
 }
 
-//GRID OLD CSS
+//BLOCKS
 
+.content-page-entete {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 0 0 350px;
+    background: rgba(0, 94, 184, .75);
+    color: #fff;
+    padding: 50px 50px 25px 25px;
+    position: relative;
+    min-height: 300px;
+}
+
+.title-page {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1em;
+}
+.content-page-teaser {
+    font-size: 14px;
+    text-align: left;
+    line-height: 21px;
+}

@@ -11,8 +11,12 @@ section {
     background-attachment: fixed;
     background-size: cover;
     article {
-        padding-top: 172px;
+        padding-top: 170px;
     }
+}
+.intro-text {
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 article {
     max-width: 1280px;
@@ -21,7 +25,10 @@ article {
     box-sizing: border-box;
     .intro-title {
         text-align: center;
-
+        font-size: 5rem;
+    }
+    &.clear-paddings {
+        padding: 0px 20px;
     }
 }
 .bg-blue {
@@ -32,15 +39,20 @@ article {
     background-color: $white; 
     color : $blue;
  }
-// .cover-semi-transparent {
-//     position: absolute;
-//     background-color: #BE7F4A;
-//     top: 0px;
-//     left: 0px;
-//     bottom: 0px;
-//     right: 0px;
-//     opacity: .2;
-// }
+ .intro {
+     z-index: 888;
+     position: relative;
+ }
+.cover-semi-transparent {
+    z-index: 777;
+    position: absolute;
+    background-color: $white;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 50%;
+    opacity: .6;
+}
 //blocks:
 
 ///////////////////////////////////////cols --2 --3
@@ -48,6 +60,7 @@ article {
     width: 50%;
     box-sizing: border-box;
     z-index: 888;
+    padding: 20px;
 }
 .absolute.col-2 {
     //position: absolute;
@@ -69,11 +82,18 @@ article {
 .col-3 {
     width: 33%;
     box-sizing: border-box;
+    padding: 20px;
 }
 h2 {
     text-align: center;
 }
-
+p, li {
+    font-size: 1.6rem;
+}
+.lists li {
+    list-style: disc;
+    margin:15px;
+}
 .col-3--flex {
     display: flex;
     
