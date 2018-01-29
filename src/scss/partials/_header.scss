@@ -1,9 +1,49 @@
-.header {
-
+header {
+  background-color: #fff;
+  nav {
+    .home a {
+      border-right: 1px solid #d3d3d3;
+      border-left: 1px solid #d3d3d3;
+      height: 35px;
+      display: inline-block;
+      margin-top: 7px;
+      overflow: hidden;
+      img {
+        height: 64px;
+        position: relative;
+        top: -13px;
+      }
+    }
+    
+    ul {
+      display: table;
+      padding-top: 15px;
+    }
+    li {
+      display : table-cell;
+      vertical-align: middle;
+      padding: 0 20px 0 0; 
+      
+      a {
+        text-decoration: none;
+        color: #3c3c3c;
+        font-size: 1.6rem;
+       
+      }
+    }
+    #header__brand-logo {
+      width: 120px;
+      a {
+        
+        img {
+        max-width: 120px;
+        }
+      }
+    }
+  }
 }
 .logo {
-  margin: -58px 0 0 -100px;
-  @include position(absolute, 50% 0 0 50%);
+ 
   img {
 
   }

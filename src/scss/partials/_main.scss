@@ -1,3 +1,89 @@
-.main {
+section {
+    min-height: 800px;
+    position: relative;
+}
+.bandeau {
+    min-height: 100px;
+}
+.home-main {
+    background-image: url('../img/content/port-marseille.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    article {
+        padding-top: 172px;
+    }
+}
+article {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    .intro-title {
+        text-align: center;
 
+    }
+}
+.bg-blue {
+   background-color: $blue; 
+   color : $white;
+}
+.bg-white {
+    background-color: $white; 
+    color : $blue;
+ }
+// .cover-semi-transparent {
+//     position: absolute;
+//     background-color: #BE7F4A;
+//     top: 0px;
+//     left: 0px;
+//     bottom: 0px;
+//     right: 0px;
+//     opacity: .2;
+// }
+//blocks:
+
+///////////////////////////////////////cols --2 --3
+.col-2 {
+    width: 50%;
+    box-sizing: border-box;
+    z-index: 888;
+}
+.absolute.col-2 {
+    //position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 50%;
+    opacity: .6;
+    z-index: 777;
+}
+.home-main .col-2 {
+    z-index: 888;
+}
+.chiffres {
+    .col-3{
+        text-align: center;
+    }
+}
+.col-3 {
+    width: 33%;
+    box-sizing: border-box;
+}
+h2 {
+    text-align: center;
+}
+
+.col-3--flex {
+    display: flex;
+    
+}
+.chiffre-cle-big {
+    font-size: 6rem;
+}
+.bnd-province {
+    background-image: url('../img/content/bandeaux-pads.png');
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size : cover;
 }
