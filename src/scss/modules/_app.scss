@@ -16,6 +16,10 @@ body {
     padding: 50px 50px 25px 25px;
     position: relative;
     min-height: 300px;
+    a {
+        color: $white;
+        font-weight: 600;
+    }
 }
 
 .title-page {

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <link rel="shortcut icon" href="http://www.enedis.fr/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon">
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
@@ -49,18 +49,20 @@
       </nav>
     </header> -->
     <header id="header" >
-        <nav>
+        <nav role="navigation">
           <ul class="w_grid limited-content">
-            <li id="header__brand-logo" class=" logogrid-col col_size-6 mobile_size-12">
+              <span id="header__brand-logo" class=" logogrid-col col_size-6 mobile_size-12">
                 <a href="http://www.enedis.fr/">
                   <img src="assets/img/static/logo_enedis_anim.gif" alt="logo enedis">
                 </a>
-              </li>
-              <li class="home">
+              </span>
+              <span class="home">
                 <a href="">
                     <img src="assets/img/static/picto_home.png" alt="home enedis">
                 </a>
-              </li>
+              </span>
+              <span class="burger">
+              </span>
               <li>
                   <a href="/">Chantier 1</a>
                 </li>
@@ -78,9 +80,14 @@
                 </li>
           </ul>
         </nav>
+        <nav class="breadcrumb-menu bg-warmgrey">
+          <div class="w_grid limited-content">
+            <a href="#contexte">Contexte des travaux</a><a href="#benefices">Benefices pour la population</a><a href="#cartiers">Cartiers en travaux</a><a href="#province">Action en province</a>
+          </div>
+        </nav>
     </header>
     <main class="main"  id="contenu" role="main">
-      <section class="home-main">
+      <section class="home-main" id="contexte">
        
         <div class="cover-semi-transparent"></div>
         <article class="intro">
@@ -93,7 +100,7 @@
         </article>
         
       </section>
-      <section class="bg-blue bandeau">
+      <section class="bg-blue bandeau" id="benefices">
           <article>
             <h2 class="title-page">Benefices aux habitants</h2>
             <ul class="lists">
@@ -109,7 +116,95 @@
             </ul>
         </article>
       </section>
-      <section class="bg-white bandeau chiffres">
+      <section class="bg-cleargrey bandeau cartiers" id="cartiers">
+        <article>
+          <h2 class="title-page">Cartiers</h2>
+          <div class="flex-direction-block">
+            <div class="col-3">
+              <div class="travaux">
+                <div class="travaux-img">
+                  <img src="assets/img/content/travaux-a.jpg" alt="travaux cartier 1">
+                </div>
+                <div class="travaux-desc-blocks">
+                  <div class="travaux-desc-block--item first">
+                    <span>
+                      <h3 class="title-page">Renovation Marseille Prefecture</h3>
+                      <a href="" class="ensavoir-white">En savoir plus</a>  
+                    </span>
+                  </div>
+                  <div class="travaux-desc-block--item second">
+                    <p><span class="intro-text">Objectif</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor </p>
+                  </div>
+                  <div class="cover-semi-transparent-full-black"></div>
+                </div>
+                <div class="date-travaux">du 12/03/2018 au 15/05/2018</div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="travaux">
+                <div class="travaux-img">
+                  <img src="assets/img/content/travaux-b.jpg" alt="travaux cartier 1">
+                </div>
+                <div class="travaux-desc-blocks">
+                  <div class="travaux-desc-block--item first">
+                    <span>
+                        <h3 class="title-page">Renovation La Valentine</h3>
+                        <a href="" class="ensavoir-white">En savoir plus</a>  
+                    </span>
+                  </div>
+                  <div class="travaux-desc-block--item second">
+                    
+                    <p><span class="intro-text">Objectif</span><br>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor </p>
+                  </div>
+                  <div class="cover-semi-transparent-full-black"></div>
+                </div>
+                <div class="date-travaux">du 12/03/2018 au 15/05/2018</div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="travaux">
+                <div class="travaux-img">
+                  <img src="assets/img/content/travaux-c.jpg" alt="travaux cartier 1">
+                </div>
+                <div class="travaux-desc-blocks">
+                  <div class="travaux-desc-block--item first">
+                    <span>
+                        <h3 class="title-page">Renovation Les Goudes</h3>
+                        <a href="" class="ensavoir-white">En savoir plus</a>  
+                    </span>
+                  </div>
+                  <div class="travaux-desc-block--item second">
+                    
+                    <p><span class="intro-text">Objectif</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor </p>
+                  </div>
+                  <div class="cover-semi-transparent-full-black"></div>
+                </div>
+                <div class="date-travaux">du 12/03/2018 au 15/05/2018</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="bg-white bandeau bnd-province" id="province">
+          <article class="clear-paddings">
+              <div class="content-page-entete">
+                  <h1 class="title-page">Notre implication en Provence Alpes du Sud</h1>    
+                  <div class="content-page-teaser">
+                      <p>
+                        Nous développons le réseau, œuvrons pour la transition énergétique et pour la vie de votre région. <a href ="http://www.enedis.fr/enedis-en-provence-alpes-du-sud">En savoir plus</a>   
+                      </p>
+                  </div>
+              
+              
+                </div>
+            
+            </article>
+      </section>
+
+
+      <section class="bg-white bandeau chiffres" id="chiffres">
           <article>
             <h2 class="title-page">Chiffres clés</h2>
             <div  class="col-3--flex">
@@ -128,21 +223,7 @@
             </div>
         </article>
       </section>
-      <section class="bg-white bandeau bnd-province">
-          <article class="clear-paddings">
-              <div class="content-page-entete">
-                  <h1 class="title-page">Notre implication en Provence Alpes du Sud</h1>    
-                  <div class="content-page-teaser">
-                      <p>
-                        Nous développons le réseau, œuvrons pour la transition énergétique et pour la vie de votre région. <a href ="http://www.enedis.fr/enedis-en-provence-alpes-du-sud">En savoir plus</a>   
-                      </p>
-                  </div>
-              
-              
-                </div>
-            
-            </article>
-      </section>
+      
     </main>
 
     <!-- <aside class="sidebar" role="complementary">
@@ -189,7 +270,7 @@ aside
             
             <div id="footer__infos" class="grid-col col_size-10 mobile_size-12 centered">
                 
-                <div id="footer__infos__logo">Enedis</div>
+                <div id="footer__infos__logo"></div>
                 
                 <div class="footer-brand-infos">
                     
@@ -205,7 +286,15 @@ aside
                     </ul>
                     
                 </div>
-                
+                <div class="footer-social">
+                  <ul>
+                    <li class="facebook">
+                      <a href=""> </a>
+                    </li><li class="twitter">
+                      <a href=""></a>
+                    </li>
+                  </ul>
+                </div>
                 
             </div>
             

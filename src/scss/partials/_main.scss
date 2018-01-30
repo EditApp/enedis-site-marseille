@@ -14,9 +14,70 @@ section {
         padding-top: 170px;
     }
 }
+.flex-direction-block {
+    display: flex;
+}
 .intro-text {
     font-size: 1.7rem;
     font-weight: 600;
+}
+.ensavoir-blue {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $blue!important;
+    position: relative;
+    &:after {
+        content: " ";
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        border-right: 1px solid $blue;
+        border-top: 1px solid $blue;
+        position: absolute;
+        top: 7px;
+        right: -12px;
+        -webkit-transition: right 0.5s; /* Safari */
+        transition: right 0.5s;
+    }
+    &:hover:after {
+        &:after {
+            right: -15px;
+            -webkit-transition: right 0.5s; /* Safari */
+            transition: right 0.5s;
+        }
+    }
+
+}
+.ensavoir-white {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $white!important;
+    position: relative;
+    &:after {
+        content: " ";
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        border-right: 1px solid $white;
+        border-top: 1px solid $white;
+        position: absolute;
+        top: 7px;
+        right: -12px;
+        -webkit-transition: right 0.5s; /* Safari */
+        transition: right 0.5s;
+    }
+    &:hover:after {
+        &:after {
+            right: -15px;
+            -webkit-transition: right 0.5s; /* Safari */
+            transition: right 0.5s;
+        }
+    }
+
 }
 article {
     max-width: 1280px;
@@ -24,7 +85,6 @@ article {
     padding: 60px 20px;
     box-sizing: border-box;
     .intro-title {
-        text-align: center;
         font-size: 3.8rem;
         text-transform: uppercase;
     }
@@ -32,13 +92,51 @@ article {
         padding: 0px 20px;
     }
 }
+
+////////////////////////////////////:
+////////////////////////////////:breadcrumb
+
+.breadcrumb-menu {
+    a {
+        text-transform: uppercase;
+        padding: 0px 10px;
+        display: inline-block;
+       &:hover,
+       &:focus,
+       &.active {
+           background-color: $darkgrey;
+       }
+    }
+}
 .bg-blue {
    background-color: $blue; 
    color : $white;
+   a {
+    color : $white;
+   }
 }
+.bg-warmgrey {
+    background-color: $grey; 
+    color : $white;
+    a {
+        color : $white;
+       }
+ }
+ 
+.bg-cleargrey {
+    background-color: $cleargrey; 
+    color : $darkgrey;
+    a {
+        color : $darkgrey;
+       }
+ }
+
 .bg-white {
     background-color: $white; 
     color : $blue;
+    a {
+        color : $blue;
+       }
  }
  .intro {
      z-index: 888;
@@ -53,6 +151,29 @@ article {
     bottom: 0px;
     right: 50%;
     opacity: .6;
+}
+.cover-semi-transparent-full {
+    position: absolute;
+    background-color: $white;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right:0px;
+    opacity: .7;
+    color : $darkgrey;
+    a {
+        color : $darkgrey;
+    }
+}
+.cover-semi-transparent-full-black {
+    position: absolute;
+    background-color: $darkgrey;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right:0px;
+    opacity: .7; 
+
 }
 //blocks:
 
@@ -99,6 +220,7 @@ p, li {
     display: flex;
     
 }
+
 .chiffre-cle-big {
     font-size: 6rem;
 }
@@ -108,7 +230,116 @@ p, li {
     background-repeat: no-repeat;
     background-size : cover;
     background-size: 100%;
+    overflow:hidden;
+    filter: contrast(100%);
+    -webkit-transition: filter 0.5s; /* Safari */
+        transition: filter 0.5s;
     &:hover {
-        background-size: 110%;
+        filter: contrast(130%);
+        -webkit-transition: filter 1s; /* Safari */
+        transition: filter 1s;
+
+       //background-size: 110%;
+    }
+}
+
+////////////////////////////////////:TRAVAUX
+.travaux {
+    overflow: hidden;
+    position: relative;
+    min-height: 350px;
+    .travaux-img {
+        z-index: 666;
+        position: absolute;
+        img:empty {
+            position: relative;
+            right: -25%;
+            margin-top: -5%;
+            left: -25%;
+            margin-bottom: -5%;
+        }
+    }
+
+    .travaux-desc-blocks {
+        width: 200%;
+        display:flex;
+        bottom: 0;
+        position: absolute;
+        z-index: 777;
+        padding: 20px 20px 30px 20px;
+        left: 0;
+        -webkit-transition: left .7s; /* Safari */
+        transition: left .7s;
+        &.open {
+            left: -100%;
+            -webkit-transition: left .7s; /* Safari */
+            transition: left .7s;
+        }
+        .title-page {
+            font-weight: 200;
+        }
+        .cover-semi-transparent-full{
+            z-index: 778;
+        }
+        .travaux-desc-block--item {
+            position: relative;
+            z-index: 779;
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            color : $white;
+            a {
+                color : $white;
+            }
+            &.first{
+                padding-right: 70px;
+                &:after {
+                    content: " ";
+                    width: 30px;
+                    position: absolute;
+                    height: 30px;
+                    transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                    border-right: 1px solid $white;
+                    border-top: 1px solid $white;
+                    top: 43%;
+                    right: 30px;
+                }
+            }
+            &.second{
+                padding-left: 70px;
+                &:after {
+                    content: " ";
+                    width: 30px;
+                    position: absolute;
+                    height: 30px;
+                    transform: rotate(-135deg);
+                    -ms-transform: rotate(-135deg);
+                    -webkit-transform: rotate(-135deg);
+                    border-right: 1px solid $white;
+                    border-top: 1px solid $white;
+                    top: 43%;
+                    left: 30px;
+                }
+            }
+            .intro-text {
+                text-align: center;
+            }
+            
+        }
+    }
+    .date-travaux {
+        position: absolute;
+        z-index: 788;
+        padding: 2px 20px;
+        bottom: 0;
+        left: 0;
+        right:0;
+        background-color: $blue;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        text-align: center;
     }
 }

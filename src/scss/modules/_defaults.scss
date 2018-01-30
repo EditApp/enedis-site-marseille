@@ -7,10 +7,113 @@ html {
   font-size: 62.5%;
 }
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  font: 300 13px/1.6 'Ubuntu', 'Helvetica Neue', Helvetica, Arial;
   color: #3c3c3c;
   transition: all .4s .3s ease-in;
 }
 body,html{
 	min-height: 100vh;
+}
+a {
+  text-decoration: none!important;
+}
+
+///////GRID
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+.w_grid {
+  width: 100%;
+  padding-left: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  clear: both;
+}
+.w_grid .grid-col.bottom-gutter {
+  margin-bottom: 20px;
+}
+.w_grid.no-gutter {
+  padding-left: 0;
+  padding-right: 0;
+}
+.w_grid.no-gutter .grid-col {
+  padding-right: 0;
+}
+.w_grid.no-gutter .grid-col.bottom-gutter {
+  margin-bottom: 0;
+}
+.w_grid.limited-content {
+  max-width: 1280px;
+}
+.grid-col {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+.grid-col.centered {
+  margin: 0 auto;
+  float: none;
+}
+.grid-col.no-float {
+  float: none;
+  clear: both;
+}
+.grid-col.col_size-12, .grid-col.w-container {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+.grid-col.col_size-11 {
+  width: 91.66667%;
+}
+.grid-col.col_size-10 {
+  width: 100%;
+}
+.grid-col.col_size-9 {
+  width: 75%;
+}
+.grid-col.col_size-8 {
+  width: 66.66667%;
+}
+.grid-col.col_size-7 {
+  width: 58.33333%;
+}
+.grid-col.col_size-6 {
+  width: 50%;
+}
+.grid-col.col_size-5 {
+  width: 41.66667%;
+}
+.grid-col.col_size-4 {
+  width: 33.33333%;
+}
+.grid-col.col_size-3 {
+  width: 25%;
+}
+.grid-col.col_size-2 {
+  width: 16.66667%;
+}
+.grid-col.col_size-1 {
+  width: 8.33333%;
+}
+.grid-col.margin-1 {
+  margin-left: 8.33333%;
+}
+.grid-col.margin-2 {
+  margin-left: 16.66667%;
+}
+.grid-col.margin-3 {
+  margin-left: 25%;
+}
+.grid-col.margin-4 {
+  margin-left: 33.33333%;
+}
+.grid-col.margin-5 {
+  margin-left: 41.66667%;
+}
+
+.grid-col.margin-6 {
+  margin-left: 50%;
 }
