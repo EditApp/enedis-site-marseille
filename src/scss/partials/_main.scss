@@ -5,6 +5,29 @@ section {
 .bandeau {
     min-height: 100px;
 }
+.cartiers {
+    .col-3 {
+        min-width: 400px;
+        &.unique{
+            max-width: 850px;
+            width: 100%;
+            display: block;
+            float: none;
+            margin: 0 auto;
+            position: relative;  
+            .travaux-img img {
+                min-width: 850px;
+                &:empty {
+                    position: relative;
+                    right: 0%;
+                    margin-top: -5%;
+                    left: 0%;
+                    margin-bottom: -5%;
+                }
+            }
+        }
+    }
+}
 .home-main {
     background-image: url('../img/content/port-marseille.jpg');
     background-repeat: no-repeat;
@@ -16,6 +39,9 @@ section {
 }
 .flex-direction-block {
     display: flex;
+    &.auto-width {
+        width: auto!important;
+    }
 }
 .intro-text {
     font-size: 1.7rem;
@@ -86,28 +112,13 @@ article {
     box-sizing: border-box;
     .intro-title {
         font-size: 3.8rem;
-        text-transform: uppercase;
     }
     &.clear-paddings {
         padding: 0px 20px;
     }
 }
 
-////////////////////////////////////:
-////////////////////////////////:breadcrumb
 
-.breadcrumb-menu {
-    a {
-        text-transform: uppercase;
-        padding: 0px 10px;
-        display: inline-block;
-       &:hover,
-       &:focus,
-       &.active {
-           background-color: $darkgrey;
-       }
-    }
-}
 .bg-blue {
    background-color: $blue; 
    color : $white;
@@ -229,7 +240,6 @@ p, li {
     min-height: 300px;
     background-repeat: no-repeat;
     background-size : cover;
-    background-size: 100%;
     overflow:hidden;
     filter: contrast(100%);
     -webkit-transition: filter 0.5s; /* Safari */
@@ -259,9 +269,37 @@ p, li {
             margin-bottom: -5%;
         }
     }
+    &.simple {
+        .travaux-img,
+        .cover-semi-transparent-full-black,
+        .date-travaux {
+            display: none;
+        }
+        .travaux-desc-blocks {
+            top: 0px;
+        }
+        &.gris {
+            .travaux-desc-blocks {
+                background-color: $grey;
+            }
+        }
+        &.bleu {
+            .travaux-desc-blocks {
+                background-color: $blue;
+            }
+        }
+        &.vert {
+            .travaux-desc-blocks {
+                background-color: $green;
+            }
+        }
+         
+    }
 
     .travaux-desc-blocks {
-        width: 200%;
+        cursor: pointer;
+        //width: 200%;
+        width: 100%;
         display:flex;
         bottom: 0;
         position: absolute;
@@ -270,11 +308,12 @@ p, li {
         left: 0;
         -webkit-transition: left .7s; /* Safari */
         transition: left .7s;
-        &.open {
-            left: -100%;
-            -webkit-transition: left .7s; /* Safari */
-            transition: left .7s;
-        }
+        // &.open {
+        //     left: -100%;
+        //     -webkit-transition: left .7s; /* Safari */
+        //     transition: left .7s;
+        // }
+       
         .title-page {
             font-weight: 200;
         }
@@ -284,45 +323,50 @@ p, li {
         .travaux-desc-block--item {
             position: relative;
             z-index: 779;
-            display: flex;
-            flex-direction: row;
-            width: 50%;
+            //width: 50%;
             color : $white;
             a {
                 color : $white;
             }
-            &.first{
-                padding-right: 70px;
-                &:after {
-                    content: " ";
-                    width: 30px;
-                    position: absolute;
-                    height: 30px;
-                    transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    -webkit-transform: rotate(45deg);
-                    border-right: 1px solid $white;
-                    border-top: 1px solid $white;
-                    top: 43%;
-                    right: 30px;
+            span {
+                width: 100%;
+                display: block;
+                .title-page  {
+                    margin-bottom: 10px;
                 }
             }
-            &.second{
-                padding-left: 70px;
-                &:after {
-                    content: " ";
-                    width: 30px;
-                    position: absolute;
-                    height: 30px;
-                    transform: rotate(-135deg);
-                    -ms-transform: rotate(-135deg);
-                    -webkit-transform: rotate(-135deg);
-                    border-right: 1px solid $white;
-                    border-top: 1px solid $white;
-                    top: 43%;
-                    left: 30px;
-                }
-            }
+            // &.first{
+            //     padding-right: 70px;
+            //     &:after {
+            //         content: " ";
+            //         width: 30px;
+            //         position: absolute;
+            //         height: 30px;
+            //         transform: rotate(45deg);
+            //         -ms-transform: rotate(45deg);
+            //         -webkit-transform: rotate(45deg);
+            //         border-right: 1px solid $white;
+            //         border-top: 1px solid $white;
+            //         top: 43%;
+            //         right: 30px;
+            //     }
+            // }
+            // &.second{
+            //     padding-left: 70px;
+            //     &:after {
+            //         content: " ";
+            //         width: 30px;
+            //         position: absolute;
+            //         height: 30px;
+            //         transform: rotate(-135deg);
+            //         -ms-transform: rotate(-135deg);
+            //         -webkit-transform: rotate(-135deg);
+            //         border-right: 1px solid $white;
+            //         border-top: 1px solid $white;
+            //         top: 43%;
+            //         left: 30px;
+            //     }
+            // }
             .intro-text {
                 text-align: center;
             }
@@ -342,4 +386,36 @@ p, li {
         font-size: 1.2rem;
         text-align: center;
     }
+}
+/////SOCIAL MEDIA MOBILE 
+.social-only-mobile {
+    display: none;
+    min-height: 188px;
+    article {
+        max-width: 335px;
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+        .col-2 {
+            width: 45%;
+            display: inline-flex;
+        }
+    }
+    p {
+        color : $coldgrey;
+    }
+    a {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background-size: 100%;
+        margin: 0 7px;
+        &.facebook {
+            background-image: url('../img/static/facebook.svg');
+        }
+        &.twitter {
+            background-image: url('../img/static/twitter.svg');
+        }
+    }
+    
 }
