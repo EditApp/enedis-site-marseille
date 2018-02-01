@@ -74,7 +74,7 @@
 /////////////////////////////SCROLL QUARTIERS
     var containerCols = $('#cartiers .col-3');
     var containerLenght = containerCols.length;
-    var totalLenght = containerLenght * 200;
+    var totalLenght = containerLenght * 400;
   
     var scrollContainer = document.querySelector('#cartiers .flex-direction-block');
     scrollContainer.style.width = totalLenght + 'px'; 

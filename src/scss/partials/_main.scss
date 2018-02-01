@@ -1,5 +1,5 @@
 section {
-    min-height: 800px;
+    //min-height: 800px;
     position: relative;
 }
 .bandeau {
@@ -7,7 +7,8 @@ section {
 }
 .cartiers {
     .col-3 {
-        min-width: 400px;
+        max-width: 400px;
+        width: 100%;
         &.unique{
             max-width: 850px;
             width: 100%;
@@ -29,10 +30,14 @@ section {
     }
 }
 .home-main {
+    min-height: 800px;
     background-image: url('../img/content/port-marseille.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    &.les-goudes {
+        background-image: url('../img/content/les-goudes.jpg');
+    }
     article {
         padding-top: 170px;
     }
@@ -75,6 +80,9 @@ section {
         }
     }
 
+}
+.col-2 p {
+    padding: 15px;
 }
 .ensavoir-white {
     font-size: 1.7rem;
@@ -231,7 +239,19 @@ p, li {
     display: flex;
     
 }
-
+.col-3,
+.col-2 {
+    .travaux {
+        img {
+            max-width: initial;
+            height: initial;
+        }
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 .chiffre-cle-big {
     font-size: 6rem;
 }
@@ -389,7 +409,6 @@ p, li {
 }
 /////SOCIAL MEDIA MOBILE 
 .social-only-mobile {
-    display: none;
     min-height: 188px;
     article {
         max-width: 335px;
@@ -418,4 +437,41 @@ p, li {
         }
     }
     
+}
+
+////////////////////////////////:MAP
+#carte {
+    min-height: 750px;
+    margin-bottom: -30px;
+    .title-page {
+        position: relative;
+        padding-top: 60px;
+        z-index:777;
+    }
+    .img-container {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index:666;
+        img  {
+            min-width: 160%;
+            min-height: 750px;
+            &:empty {
+                position: absolute;
+                left: -50%;
+                right: -50%;
+                top: -10%;
+                bottom: -30%;
+            }
+    
+        }
+    }
+}
+
+
+address {
+    text-align: center;
 }

@@ -599,14 +599,14 @@ header {
   list-style: none; }
 
 section {
-  min-height: 800px;
   position: relative; }
 
 .bandeau {
   min-height: 100px; }
 
 .cartiers .col-3 {
-  min-width: 400px; }
+  max-width: 400px;
+  width: 100%; }
   .cartiers .col-3.unique {
     max-width: 850px;
     width: 100%;
@@ -624,10 +624,13 @@ section {
         margin-bottom: -5%; }
 
 .home-main {
+  min-height: 800px;
   background-image: url("../img/content/port-marseille.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  .home-main.les-goudes {
+    background-image: url("../img/content/les-goudes.jpg"); }
   .home-main article {
     padding-top: 170px; }
 
@@ -664,6 +667,9 @@ section {
     right: -15px;
     /* Safari */
     transition: right 0.5s; }
+
+.col-2 p {
+  padding: 15px; }
 
 .ensavoir-white {
   font-size: 1.7rem;
@@ -797,6 +803,16 @@ p, li {
   display: -ms-flexbox;
   display: flex; }
 
+.col-3 .travaux img,
+.col-2 .travaux img {
+  max-width: initial;
+  height: initial; }
+
+.col-3 img,
+.col-2 img {
+  max-width: 100%;
+  height: auto; }
+
 .chiffre-cle-big {
   font-size: 6rem; }
 
@@ -882,7 +898,6 @@ p, li {
     text-align: center; }
 
 .social-only-mobile {
-  display: none;
   min-height: 188px; }
   .social-only-mobile article {
     max-width: 335px;
@@ -906,6 +921,34 @@ p, li {
       background-image: url("../img/static/facebook.svg"); }
     .social-only-mobile a.twitter {
       background-image: url("../img/static/twitter.svg"); }
+
+#carte {
+  min-height: 750px;
+  margin-bottom: -30px; }
+  #carte .title-page {
+    position: relative;
+    padding-top: 60px;
+    z-index: 777; }
+  #carte .img-container {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 666; }
+    #carte .img-container img {
+      min-width: 160%;
+      min-height: 750px; }
+      #carte .img-container img:empty {
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        top: -10%;
+        bottom: -30%; }
+
+address {
+  text-align: center; }
 
 #footer {
   border-top: 4px solid #a39382;
@@ -1161,6 +1204,15 @@ body {
     display: none; } }
 
 @media screen and (max-width: 1025px) {
+  .cartiers .col-3 {
+    max-width: 400px;
+    width: auto;
+    position: relative;
+    margin: 0 auto; }
+  .flex-direction-block {
+    display: block;
+    width: auto !important;
+    margin-left: 0 !important; }
   #sousmenu {
     display: none; }
   .social-only-mobile {
@@ -1170,6 +1222,18 @@ body {
     font-size: 1.2vw; }
   #footer__links li {
     font-size: 1.3vw; } }
+
+@media screen and (max-width: 1366px) {
+  .cartiers .col-3 {
+    max-width: 400px;
+    width: auto;
+    position: relative;
+    margin: 0 auto; }
+  .flex-direction-block {
+    display: block;
+    width: auto !important; }
+  #sousmenu {
+    display: none; } }
 
 @media screen and (max-width: 1080px) {
   /* line 103, ../sass/components/_wami-grid.scss */
